@@ -1,7 +1,5 @@
 # Rust Algorithms and Data Structures
 
-![Rust logo](rust-logo-mozilla.jpg)
-
 This is a Rust equivalent to [FreeCodeCamp's JavaScript Algorithms and Data Structures course](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) (section ["Intermediate Algorithm Scripting"](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)).
 
 ## Install
