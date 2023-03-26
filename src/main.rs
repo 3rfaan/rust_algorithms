@@ -31,15 +31,13 @@ fn main() -> Result<(), Box<dyn Error>> {
     ]);
 
     println!(
-        "{}\n{}\n{}\n{}\n{}",
+        "{}\n{}\n{}",
         "========================================================="
             .bold()
             .yellow(),
         "WELCOME TO THE RUST ALGORITHMS AND DATA STRUCTURES COURSE"
             .bold()
             .yellow(),
-        "Author: Arfan Zubi".bold().black(),
-        "License: GNU General Public License 3".bold().black(),
         "========================================================="
             .bold()
             .yellow(),
