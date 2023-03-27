@@ -22,9 +22,9 @@ fn translate_pig_latin(s: String) -> String {
     } else {
         // If starting with consonant(s) then taking the consonant(s) and putting them at the end,
         // then adding "ay"
-        let re = Regex::new(r"(?P<consonant>^[^aeiou]+)(?P<rest>\w*)").unwrap();
+        let re = Regex::new(r"(^[^aeiou]+)(\w*)").unwrap();
 
-        result = re.replace(&s, "${rest}${consonant}ay").to_string();
+        result = re.replace(&s, "${2}${1}ay").to_string();
     }
     result
 }

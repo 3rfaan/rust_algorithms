@@ -5,31 +5,24 @@
 
 #[allow(dead_code)]
 fn diff_array<'a>(arr1: Vec<&'a str>, arr2: Vec<&'a str>) -> Vec<&'a str> {
-    let mut new_arr = Vec::new();
-
-    // Pushing all content of arr1 into new vector
-    for string in arr1 {
-        new_arr.push(string);
-    }
-
     // Check if arr1 contains strings of arr2, if it does delete the string, else push it
     for string in arr2 {
-        if new_arr.contains(&string) {
+        if arr1.contains(&string) {
             // Find out index of the given string
-            let index = new_arr.iter().position(|&x| x == string).unwrap();
+            let index = arr1.iter().position(|&x| x == string).unwrap();
 
             // Remove the string at the given index
-            new_arr.remove(index);
+            arr1.remove(index);
         } else {
-            // Else we push the string to new_arr
-            new_arr.push(string);
+            // Else we push the string to arr1
+            arr1.push(string);
         }
     }
 
     // Sorting alphabetically
-    new_arr.sort_by(|a, b| a.to_lowercase().cmp(&b.to_lowercase()));
+    arr1.sort_by(|a, b| a.to_lowercase().cmp(&b.to_lowercase()));
 
-    new_arr
+    arr1
 }
 
 #[cfg(test)]
