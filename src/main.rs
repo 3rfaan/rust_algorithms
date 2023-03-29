@@ -1,4 +1,4 @@
-use cli_table::{print_stdout, Cell, Style, Table};
+use cli_table::{format::Justify, print_stdout, Cell, Style, Table};
 use colored::*;
 use std::io::{self, Write};
 use std::{collections::BTreeMap, error::Error, process::Command};
@@ -46,7 +46,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut table = vec![];
 
     for (k, v) in &exercises {
-        table.push(vec![k.cell(), v.cell()]);
+        table.push(vec![k.cell().justify(Justify::Right), v.cell()]);
     }
 
     print_stdout(
