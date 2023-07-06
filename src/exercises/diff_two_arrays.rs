@@ -32,8 +32,9 @@ mod tests {
     fn test2() {
         let arr1 = vec!["andesite", "grass", "dirt", "pink wool", "dead shrub"];
         let arr2 = vec!["diorite", "andesite", "grass", "dirt", "dead shrub"];
-
-        assert_eq!(diff_array(arr1, arr2), ["diorite", "pink wool"]);
+        let mut answer = diff_array(arr1, arr2);
+        answer.sort_unstable();
+        assert_eq!(answer, ["diorite", "pink wool"]);
     }
 
     #[test]
